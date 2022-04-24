@@ -1,0 +1,8 @@
+[submodule "conceptual-bot-modeler"]
+	path = conceptual-bot-modeler
+	url = https://github.com/bptlab/conceptual-bot-modeler
+	branch = main
+[submodule "conceptual-bot-backend"]
+	path = conceptual-bot-backend
+	url = https://github.com/bptlab/conceptual-bot-backend
+	branch = main
