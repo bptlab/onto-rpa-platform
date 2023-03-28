@@ -1,27 +1,33 @@
-# Conceptual Bot Platform
-_A meta repository for the components of the conceptual bot platform_
+_This is the readme for the abstraction component. [See here for main readme of the OntoRPA platform.](https://github.com/bptlab/onto-rpa-platform)_
 
-The conceptual bot platform serves as a software system for modeling and analyzing conceptual RPA bots based on the ontology of RPA operations.
-Furthermore, modeled conceptual RPA bots can be linked, i.e. translated, to existing RPA tools, currently [Robot Framework](https://robotframework.org/) and [taskt](http://www.taskt.net/).
+# Abstraction of RPA Bot Models
+The abstraction component is implemented as part of the [OntoRPA front end](https://github.com/bptlab/onto-rpa-frontend/).
 
-Demonstration of the platform (https://youtu.be/Pq5FIS9KtqA):
+![animation for opening abstraction view](figures/RPA_Onto-Abstraction%20Start.gif)
+It offers two sliders controlling the dimensions of coverage and granularity.
 
-[![Thumbnail to screencast](https://img.youtube.com/vi/Pq5FIS9KtqA/0.jpg)](https://www.youtube.com/watch?v=Pq5FIS9KtqA)
+---
 
-## Available components
-So far, the platform consists of a [front end (the modeler)](https://github.com/bptlab/conceptual-bot-modeler), and a [back end](https://github.com/bptlab/conceptual-bot-backend) for storing and linking bots.
+![animation for coverage](figures/RPA_Onto-Abstraction%20Coverage.gif)
+Using the coverage slider, the degree of elimination can be determined.
+The elimination is based on weights assigned to classes in the operations-taxonomy as part of the ontology of RPA operations.
 
-### Conceptual RPA Bot Modeler
-This modeler currently comprises the following functionality:
-- Parsing the ontology of RPA operations
-- Mapping from BPMO concepts to BPMN
-- Modeling conceptual bots using the Business Process Model and Notation using operations from the ontology
-- Support for different types of operations, such as triggers, decisions, and context containers
-- Parsing BPMN models to generic process trees that are sent to the back end for storing
-- Analzying stored bots for included operations and concepts, i.e. searching the bot repository for bots automating certain applications or using specific operations
+---
+
+![animation for granularity](figures/RPA_Onto-Abstraction%20Granularity.gif)
+Using the granularity slider, the level of aggregation can be determined.
+With each slider step, more nodes that are intended for aggregation, are merged, resulting in a higher level of abstraction.
+Nodes that are aggregated or intended for aggregation show their software context and data context in the label (see limitation below).
+In this example, full coverage is chosen, thus not all nodes shown here are intended for aggregation, "blocking" some parts of the aggregation.
+
+---
+
+![animation for coverage and granularity](figures/RPA_Onto-Abstraction%20CovGran.gif)
+Using both sliders in combination, a very abstract view can be obtained.
+With the last slider step, also nodes across data contexts are aggregated.
 
 
-### Conceptual RPA Bot Back End
-The back end, serving as the bot repository, currently offers the following features:
-- Storing the generic process tree and the visual BPMN representation of RPA bots
-- Linking, i.e., translating, stored bots to either Robot Framework (`.robot`) or taskt files (`.xml`)
+## Current Limitations/Bugs
+- Data context is only marked by random strings as the OntoRPA platform does not support the configuration of operations so far.
+- When aggregating across data context, still the name of the first data context is used for label generation.
+- No "speaking" names for high level operations included. The abstraction view here does use the ids instead of descriptive labels.
