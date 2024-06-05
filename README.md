@@ -27,3 +27,14 @@ This modeler currently comprises the following functionality:
 The back end, serving as the bot repository, currently offers the following features:
 - Storing the generic process tree and the visual BPMN representation of RPA bots
 - Linking, i.e., translating, stored bots to either Robot Framework (`.robot`) or taskt files (`.xml`)
+
+
+## Installation
+Requirements:
+- node.js
+- Docker or directly MongoDB
+
+1. You need to clone/download the sources for the [back end](https://github.com/bptlab/conceptual-bot-backend) and the [front end](https://github.com/bptlab/conceptual-bot-modeler).
+2. Run `npm install` in each directory (BE+FE)
+3. Make sure you have MongoDB running at port `27017`.
+4. Run `npm run dev` in each directory (BE+FE)
