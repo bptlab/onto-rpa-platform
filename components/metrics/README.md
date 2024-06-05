@@ -15,7 +15,7 @@ The new metrics view can be opened by clicking the respective icon on a bot mode
 All available metrics are automatically computed and the results are displayed next to the model itself.
 
 
-![animation showing metrics view](figures/OntoRPA-Metrics%20Start.gif)
+![animation showing metrics view](figures/OntoRPA-Metrics%20Overview.gif)
 For each metric, a brief explanation can be viewed.
 Values with more then two decimal places are rounded, indicated by a tilde (~).
 The actual value can be viewed by hovering over the value.
