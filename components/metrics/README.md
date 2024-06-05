@@ -11,5 +11,4 @@ Furthermore, the component computes the adapted Halstead-based Process Complexit
 ## Current Limitations
 
 - The metrics implemented so far are not control-flow sensitive and thus might produce inacurrate numbers for models with decision logic.
-- The user interface and presentation of the metrics need improvement.
-- Some numbers are mistakenly inidicated to be rounded values.
+- The user interface and presentation of the metrics need improvement, so far it's only a long list.
