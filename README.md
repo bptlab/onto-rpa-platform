@@ -4,9 +4,11 @@ _A meta repository for the components of the conceptual bot platform_
 The conceptual bot platform serves as a software system for modeling and analyzing conceptual RPA bots based on the ontology of RPA operations.
 Furthermore, modeled conceptual RPA bots can be linked, i.e. translated, to existing RPA tools, currently [Robot Framework](https://robotframework.org/) and [taskt](https://github.com/saucepleez/taskt).
 
-Demonstration of the platform (https://youtu.be/Pq5FIS9KtqA):
+Demonstration of the platform featuring the modeling (video does not show modeling of data-aspect added later) and translation components (https://youtu.be/Pq5FIS9KtqA):
 
 [![Thumbnail to screencast](https://img.youtube.com/vi/Pq5FIS9KtqA/0.jpg)](https://www.youtube.com/watch?v=Pq5FIS9KtqA)
+
+For illustrations of the newer components, see the respective modules for [abstraction](https://github.com/bptlab/onto-rpa-platform/blob/main/components/abstraction/README.md) and the [complexity metrics](https://github.com/bptlab/onto-rpa-platform/blob/main/components/metrics/README.md).
 
 ## Available components
 So far, the platform consists of a [front end (the modeler)](https://github.com/bptlab/conceptual-bot-modeler), and a [back end](https://github.com/bptlab/conceptual-bot-backend) for storing and linking bots.
